@@ -25,9 +25,9 @@ jobs:
     - name: Install Heroku CLI
       run: wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
     - name: Deploy to Heroku
-      run: dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
+      run: dpl --provider=heroku --app=$my-first-ever-site --api-key=$de16ad26-19fc-4519-b1e5-db1be4ccdfe8
     - name: Run migrations on Heroku
-      run: heroku run --app $HEROKU_APP_NAME migrate
+      run: heroku run --app $my-first-ever-site migrate
     - uses: chrnorm/deployment-action@releases/v1
       name: Create GitHub deployment
       with:
